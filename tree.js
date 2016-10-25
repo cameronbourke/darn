@@ -136,12 +136,13 @@ const dependencyTree = (dependencies) => {
 const asyncDependencyTree = (dependencies) => new Promise((resolve, reject) => {
 	const node = {};
 	Object.keys(dependencies || {}).forEach((depName) => {
+
 		getAsyncPackage(depName).then((dep) => {
 			node[depName] = {
 				name: dep.name,
 				version: dep.version,
 				dist: dep.dist.tarball,
-				dependencies: dependencyTree(dep.dependencies),
+				dependencies: asyncDependencyTree(dep.dependencies),
 			};
 		});
 
