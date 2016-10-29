@@ -1,0 +1,26 @@
+{
+  "name": "farn",
+  "version": "1.0.0",
+  "description": "World's simplest and dumbest node package manager",
+  "main": "index.js",
+  "scripts": {
+		"start": "npm run i",
+		"i": "node cli/install lodash react",
+		"rm": "node cli/remove",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cameronbourke/farn/"
+  },
+  "author": "Cameron Bourke <cameron2295@gmail.com> (http://cameronbourke.com/)",
+  "license": "MIT",
+  "dependencies": {
+    "mkdirp": "0.5.1",
+    "node-fetch": "1.6.3",
+    "ramda": "0.22.1",
+    "request": "2.76.0",
+    "rimraf": "2.5.4",
+    "tar.gz": "1.0.5"
+  }
+}
