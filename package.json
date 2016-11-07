@@ -1,26 +1,25 @@
 {
-  "name": "farn",
+  "name": "tinypm",
   "version": "1.0.0",
   "description": "World's simplest and dumbest node package manager",
-  "main": "index.js",
+  "bin": {
+    "tinypm": "./bin/tinypm.js"
+  },
+  "dependencies": {
+    "minimist": "1.2.0",
+    "node-fetch": "1.6.3",
+    "request": "2.78.0",
+    "rimraf": "2.5.4",
+    "tar": "2.2.1"
+  },
+  "devDependencies": {},
   "scripts": {
-		"start": "npm run i",
-		"i": "node cli/install lodash react",
-		"rm": "node cli/remove",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/cameronbourke/farn/"
+    "url": "https://github.com/cameronbourke/tinypm/"
   },
   "author": "Cameron Bourke <cameron2295@gmail.com> (http://cameronbourke.com/)",
-  "license": "MIT",
-  "dependencies": {
-    "mkdirp": "0.5.1",
-    "node-fetch": "1.6.3",
-    "ramda": "0.22.1",
-    "request": "2.76.0",
-    "rimraf": "2.5.4",
-    "tar.gz": "1.0.5"
-  }
+  "license": "MIT"
 }
