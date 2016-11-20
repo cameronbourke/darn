@@ -12,9 +12,12 @@
     "semver": "5.3.0",
     "tar": "2.2.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "mocha": "3.1.2",
+    "nock": "9.0.2"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "PORT=5000 node test/index.js"
   },
   "repository": {
     "type": "git",

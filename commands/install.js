@@ -1,7 +1,7 @@
+const { GLOBAL, DEPENDENCY_TYPE } = require('../lib/constants');
 const dependencyTree = require('../lib/dependencyTree');
 const writeTree = require('../lib/writeDependencyTree');
 const { savePackage } = require('../lib/packageJson');
-const { GLOBAL, DEPENDENCY_TYPE } = require('../lib/constants');
 
 
 module.exports = (packages) => {
