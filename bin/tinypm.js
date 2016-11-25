@@ -23,7 +23,8 @@ switch (command) {
 				console.log('[tinypm] install complete');
 			})
 			.catch((err) => {
-				console.error('[tinypm] install err', err);
+				if (err.code === 'ENOENT') return console.warn('[tinypm] install warning', err.message);
+				console.error('[tinypm] install err', err.message);
 			});
 	case 'uninstall':
 	case 'un':
@@ -33,7 +34,7 @@ switch (command) {
 				console.log('[tinypm] uninstall complete');
 			})
 			.catch((err) => {
-				console.error('[tinypm] uninstall err', err);
+				console.error('[tinypm] uninstall err', err.message);
 			});
 	default:
 		console.log('[tinypm] command not found');
