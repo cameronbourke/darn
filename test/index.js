@@ -3,8 +3,8 @@ const Mocha = require('mocha');
 
 const mocha = new Mocha({ growl: true });
 
-mocha.addFile(path.join(__dirname, 'testHelper.js'));
-mocha.addFile(path.join(__dirname, 'fetchedVersions.test.js'));
+// mocha.addFile(path.join(__dirname, 'testHelper.js'));
+mocha.addFile(path.join(__dirname, 'FetchedVersions.test.js'));
 
 mocha.run(function (failures) {
 	process.on('exit', function () {
