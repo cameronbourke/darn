@@ -1,0 +1,10 @@
+{
+  "name": "tinypm",
+  "version": "1.0.0",
+  "description": "Test tinypm package.json",
+  "dependencies": {},
+  "devDependencies": {
+    "react": "latest",
+    "lodash": "latest"
+  }
+}

@@ -3,13 +3,14 @@ const { removePackage } = require('../lib/packageJson');
 const { PGK_DIR, GLOBAL, DEPENDENCY_TYPE } = require('../lib/constants');
 
 const uninstall = (packages) => {
-	const promises = Object.keys(packages).map((name) => rimraf(`${PGK_DIR}/${name}`));
-	return Promise.all(promises).then(() => packages);
+	const promises = Object.keys(packages)
+	.map((name) => rimraf(`${PGK_DIR}/${name}`));
+	return Promise.all(promises);
 };
 
 
 module.exports = (packages) => {
-	const rm = uninstall(packages);
-	if (!GLOBAL && DEPENDENCY_TYPE) return rm.then(removePackage);
-	return rm;
+	const remove = uninstall(packages);
+	if (GLOBAL && !DEPENDENCY_TYPE) return remove;
+	return remove.then(() => removePackage(packages));	
 };
